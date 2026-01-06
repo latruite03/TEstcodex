@@ -3,17 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu</title>
+    <title>Saut à ski</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="layout">
       <section class="game-area" aria-label="Zone de jeu">
-        <div class="game-board" role="presentation"></div>
+        <header class="game-header">
+          <div>
+            <h1>Mini saut à ski</h1>
+            <p class="subtitle">
+              Choisis ton skieur, puis appuie sur la barre espace pour l'impulsion
+              et la réception.
+            </p>
+          </div>
+          <div class="game-instructions">
+            <p><strong>Contrôle :</strong> barre espace</p>
+            <p><strong>Objectif :</strong> impulsion + réception réussies</p>
+          </div>
+        </header>
+
+        <div class="selection-panel" aria-label="Sélection du skieur">
+          <h2>Choisis ton skieur</h2>
+          <div class="skier-list" id="skier-list"></div>
+        </div>
+
+        <div class="game-board">
+          <canvas id="game-canvas" width="760" height="320" aria-label="Animation"></canvas>
+          <div class="game-overlay" id="game-overlay">Appuie sur “Démarrer”</div>
+        </div>
       </section>
       <aside class="stats" aria-label="Statistiques">
         <h2>Statistiques</h2>
         <div class="score-panel" aria-live="polite">
+          <div class="score-item">
+            <span>Skieur</span>
+            <strong id="skier-value">—</strong>
+          </div>
           <div class="score-item">
             <span>Distance</span>
             <strong id="distance-value">0 m</strong>
