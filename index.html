@@ -1,26 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu</title>
+    <title>Test de saut</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="layout">
-      <section class="game-area" aria-label="Zone de jeu">
-        <div class="game-board" role="presentation"></div>
-      </section>
-      <aside class="stats" aria-label="Statistiques">
-        <h2>Statistiques</h2>
-        <ul>
-          <li>Score: 0</li>
-          <li>Niveau: 1</li>
-        </ul>
-        <button type="button" class="start-button">Démarrer</button>
-      </aside>
+    <main class="container">
+      <h1>Test de saut</h1>
+      <p class="instructions">
+        Appuyez sur <span class="key">Espace</span> pour l’impulsion, puis de
+        nouveau pendant la fenêtre de réception.
+      </p>
+
+      <div class="status-card">
+        <div class="status-row">
+          <span class="label">État :</span>
+          <span id="state-label" class="value">prêt</span>
+        </div>
+        <div class="status-row">
+          <span class="label">Message :</span>
+          <span id="message-label" class="value">En attente de l’impulsion.</span>
+        </div>
+      </div>
+
+      <div class="indicator">
+        <div class="indicator__label">Fenêtre de réception</div>
+        <div class="indicator__track">
+          <div id="indicator-bar" class="indicator__bar"></div>
+        </div>
+      </div>
+
+      <button id="impulse-button" class="button" type="button">
+        Impulsion (Espace)
+      </button>
     </main>
 
-    <script src="game.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
