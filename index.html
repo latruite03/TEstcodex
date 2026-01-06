@@ -13,11 +13,25 @@
       </section>
       <aside class="stats" aria-label="Statistiques">
         <h2>Statistiques</h2>
-        <ul>
-          <li>Score: 0</li>
-          <li>Niveau: 1</li>
-        </ul>
-        <button type="button" class="start-button">Démarrer</button>
+        <div class="score-panel" aria-live="polite">
+          <div class="score-item">
+            <span>Distance</span>
+            <strong id="distance-value">0 m</strong>
+          </div>
+          <div class="score-item">
+            <span>Statut de réception</span>
+            <strong id="reception-status">En attente</strong>
+          </div>
+          <div class="score-item">
+            <span>Timing</span>
+            <strong id="timing-value">—</strong>
+          </div>
+        </div>
+        <p class="status-message" id="status-message">Prêt à jouer.</p>
+        <div class="button-group">
+          <button type="button" class="start-button">Démarrer</button>
+          <button type="button" class="restart-button">Recommencer</button>
+        </div>
       </aside>
     </main>
 
