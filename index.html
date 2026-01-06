@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="game-area" aria-label="Zone de jeu">
+        <div class="game-board" role="presentation"></div>
+      </section>
+      <aside class="stats" aria-label="Statistiques">
+        <h2>Statistiques</h2>
+        <ul>
+          <li>Score: 0</li>
+          <li>Niveau: 1</li>
+        </ul>
+        <button type="button" class="start-button">Démarrer</button>
+      </aside>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
